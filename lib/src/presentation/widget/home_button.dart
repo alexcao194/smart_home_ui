@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:smart_home_ui/src/presentation/screens/bottom_sheet/broadcast_bottom_sheet.dart';
+import 'package:smart_home_ui/src/presentation/screens/bottom_sheet/camera_bottom_sheet.dart';
+import 'package:smart_home_ui/src/presentation/screens/bottom_sheet/clock_bottom_sheet.dart';
 import 'package:smart_home_ui/src/presentation/screens/bottom_sheet/lights_bottom_sheet.dart';
+import 'package:smart_home_ui/src/presentation/screens/bottom_sheet/note_bottom_sheet.dart';
+import 'package:smart_home_ui/src/presentation/screens/bottom_sheet/settings_bottom_sheet.dart';
+import 'package:smart_home_ui/src/presentation/screens/bottom_sheet/televison_bottom_sheet.dart';
+import 'package:smart_home_ui/src/presentation/screens/bottom_sheet/wifi_bottom_sheet.dart';
+import 'package:smart_home_ui/src/presentation/screens/bottom_sheet/thermostat_bottom_sheet.dart';
 
 enum BottomSheets {
   lights,
-  media,
-  callHome,
+  televisions,
+  notes,
   broadcast,
   thermostat,
   cameras,
   wifi,
-  routines,
+  clock,
   settings
 }
 
@@ -61,22 +69,22 @@ class HomeButton extends StatelessWidget {
                             switch(type) {
                               case BottomSheets.lights:
                                 return const LightBottomSheet();
-                              case BottomSheets.media:
-                                return const LightBottomSheet();
-                              case BottomSheets.callHome:
-                                return const LightBottomSheet();
+                              case BottomSheets.televisions:
+                                return const TelevisionsBottomSheet();
+                              case BottomSheets.notes:
+                                return const NoteBottomSheet();
                               case BottomSheets.broadcast:
-                                return const LightBottomSheet();
+                                return const BroadcastBottomSheet();
                               case BottomSheets.thermostat:
-                                return const LightBottomSheet();
+                                return const ThermostatBottomSheet();
                               case BottomSheets.cameras:
-                                return const LightBottomSheet();
+                                return const CameraBottomSheet();
                               case BottomSheets.wifi:
-                                return const LightBottomSheet();
-                              case BottomSheets.routines:
-                                return const LightBottomSheet();
+                                return const WifiBottomSheet();
+                              case BottomSheets.clock:
+                                return const ClockBottomSheet();
                               case BottomSheets.settings:
-                                return const LightBottomSheet();
+                                return const SettingsBottomSheet();
                             }
                           });
                       },

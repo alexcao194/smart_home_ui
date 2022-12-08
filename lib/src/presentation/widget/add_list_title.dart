@@ -15,17 +15,14 @@ class AddListTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Padding(
-        padding: const EdgeInsets.all(8.0) + const EdgeInsets.symmetric(vertical: 4.0),
-        child: Row(
-          children: [
-            Icon(icon, color: AppColors.icon, size: 24),
-            const SizedBox(width: 24.0),
-            Text(label, style: const TextStyle(color: Colors.white, fontSize: 16)),
-          ],
-        ),
+    return MaterialButton(
+      onPressed: () {  },
+      child: Row(
+        children: [
+          Icon(icon, color: AppColors.icon, size: 24),
+          const SizedBox(width: 24.0),
+          Text(label, style: const TextStyle(color: Colors.white, fontSize: 16)),
+        ],
       ),
     );
   }

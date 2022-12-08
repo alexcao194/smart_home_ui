@@ -23,16 +23,13 @@ class HomeScreen extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.all(4.0),
-            child: GestureDetector(
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(50.0),
-                child: Container(
-                  height: 50.0,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50.0)
-                  ),
-                  child: Image.asset(AppAssets.avatar, fit: BoxFit.cover)
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(50.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50.0)
                 ),
+                child: Image.asset(AppAssets.avatar, fit: BoxFit.cover)
               ),
             ),
           )
@@ -65,15 +62,15 @@ class HomeScreen extends StatelessWidget {
                   background: Color.fromARGB(102, 112, 252, 161),
                   primary: Color.fromARGB(255, 112, 252, 161),
                   icons: Icons.ondemand_video,
-                  label: "Media",
-                  type: BottomSheets.media,
+                  label: "Television",
+                  type: BottomSheets.televisions,
                 ),
                 HomeButton(
                   background: Color.fromARGB(102, 180, 112, 252),
                   primary: Color.fromARGB(255, 180, 112, 252),
-                  icons: Icons.home_work,
-                  label: "Call Home",
-                  type: BottomSheets.callHome,
+                  icons: Icons.note,
+                  label: "Notes",
+                  type: BottomSheets.notes,
                 ),
                 HomeButton(
                   background: Color.fromARGB(102, 112, 252, 219),
@@ -118,9 +115,9 @@ class HomeScreen extends StatelessWidget {
                 HomeButton(
                   background: Color.fromARGB(102, 252, 112, 175),
                   primary: Color.fromARGB(255, 252, 112, 175),
-                  icons: Icons.flashlight_off_outlined,
-                  label: 'Routines',
-                  type: BottomSheets.routines,
+                  icons: Icons.timelapse_outlined,
+                  label: 'Clock',
+                  type: BottomSheets.clock,
                 ),
                 HomeButton(
                   background: Colors.transparent,
@@ -131,11 +128,11 @@ class HomeScreen extends StatelessWidget {
                   rounded: true,
                 )
               ],
-            )
+            ),
+            Image.asset(AppAssets.smart)
           ],
         ),
       ),
     );
   }
 }
-

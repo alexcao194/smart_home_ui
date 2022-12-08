@@ -56,7 +56,7 @@ class AddScreen extends StatelessWidget {
               AddListTitle(icon: Icons.home, label: "Tạo nhà mới"),
               Padding(
                 padding: EdgeInsets.all(8.0),
-                child: Text('Thêm vào nhà', style: TextStyle(color: Colors.white, fontSize: 20)),
+                child: Text('Quản lý dịch vụ', style: TextStyle(color: Colors.white, fontSize: 20)),
               ),
               AddListTitle(icon: Icons.music_note, label: "Nhạc"),
               AddListTitle(icon: Icons.video_collection, label: "Video"),
