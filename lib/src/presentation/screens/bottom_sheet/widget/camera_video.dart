@@ -23,7 +23,7 @@ class CameraVideo extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Camera $name", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                Text("Camera $name", style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                 IconButton(
                   icon: const Icon(Icons.power_settings_new, color: Colors.red),
                   onPressed: () {},
@@ -40,15 +40,9 @@ class CameraVideo extends StatelessWidget {
               child: Stack(
                 children: [
                   Image.asset(video),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text("live", style: TextStyle(color: Colors.white)),
-                      ),
-                    ],
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text("live", style: TextStyle(color: Colors.white)),
                   )
                 ],
               ),
